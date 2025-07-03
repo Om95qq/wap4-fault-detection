@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, send_file
 import pandas as pd
+import matplotlib
+matplotlib.use('Agg')  # Use non-GUI backend for production
 import matplotlib.pyplot as plt
 from sklearn.ensemble import IsolationForest
 import io
@@ -65,7 +67,7 @@ def analyze():
 
     engine_load_status = "Stable" if df["motor_temp"].std() < 10 else "Fluctuating"
     brake_balance = "Balanced" if df["brake_pressure"].std() < 1.5 else "Unstable"
-    voltage_variance = f"{df["wheel_current_diff"].std():.2f} A"
+    voltage_variance = f"{df['wheel_current_diff'].std():.2f} A"
     aux_status_summary = "Nominal" if df["aux_status"].isin([0, 1]).all() else "Irregular"
 
     result_file = os.path.join(RESULT_FOLDER, f"report_{uuid.uuid4().hex[:8]}.csv")
@@ -94,17 +96,13 @@ def analyze():
         axs[i].spines['bottom'].set_linewidth(2)
 
     fig.patch.set_facecolor('#b0bec5')
-    fig.patch.set_alpha(1)
     fig.subplots_adjust(left=0.1, right=0.95, top=0.95, bottom=0.1)
     fig.suptitle("Sensor Readings with Anomaly Highlights", fontsize=14, fontweight='bold', color='#102027')
 
     buf = io.BytesIO()
     plt.savefig(buf, format='png', bbox_inches='tight')
-    buf.seek(0)
-    image_data = buf.read()
+    image_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
     buf.close()
-
-    image_base64 = base64.b64encode(image_data).decode('utf-8')
 
     plt.figure(figsize=(8, 4))
     sns.scatterplot(x=df.index, y=df['faulty_component'], hue=df['final_status'], palette={"Anomaly": "red", "Normal": "green"})
@@ -114,8 +112,7 @@ def analyze():
     plt.xticks(rotation=45)
     timeline_buf = io.BytesIO()
     plt.savefig(timeline_buf, format='png', bbox_inches='tight')
-    timeline_buf.seek(0)
-    timeline_data = base64.b64encode(timeline_buf.read()).decode('utf-8')
+    timeline_data = base64.b64encode(timeline_buf.getvalue()).decode('utf-8')
     timeline_buf.close()
 
     top_fault = df[df['final_status'] == 'Anomaly']['faulty_component'].value_counts().idxmax()
@@ -148,4 +145,6 @@ def download(file_name):
     return send_file(os.path.join(RESULT_FOLDER, file_name), as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    import sys
+    port = int(os.environ.get("PORT", 5000)) if not sys.argv[1:] else int(sys.argv[1])
+    app.run(host='0.0.0.0', port=port)

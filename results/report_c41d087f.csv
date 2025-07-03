@@ -1,0 +1,16 @@
+motor_temp,brake_pressure,wheel_current_diff,aux_status,ml_anomaly,faulty_component,recommended_action,final_status
+90,7.2,120,1,1,OK,All systems nominal,Normal
+95,6.8,110,0,-1,OK,All systems nominal,Anomaly
+88,7.5,130,1,1,OK,All systems nominal,Normal
+92,6.9,125,1,1,OK,All systems nominal,Normal
+89,7.1,135,0,1,OK,All systems nominal,Normal
+93,7.4,145,1,1,OK,All systems nominal,Normal
+85,7.0,140,0,1,OK,All systems nominal,Normal
+100,6.5,150,1,1,OK,All systems nominal,Normal
+105,6.7,160,1,1,OK,All systems nominal,Normal
+98,7.2,170,0,1,OK,All systems nominal,Normal
+102,6.9,180,1,1,OK,All systems nominal,Normal
+95,7.0,190,1,1,OK,All systems nominal,Normal
+97,7.3,200,1,1,OK,All systems nominal,Normal
+101,6.8,195,0,-1,OK,All systems nominal,Anomaly
+96,7.1,185,1,1,OK,All systems nominal,Normal
