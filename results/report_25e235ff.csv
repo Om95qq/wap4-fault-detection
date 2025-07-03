@@ -1,0 +1,11 @@
+motor_temp,brake_pressure,wheel_current_diff,aux_status,ml_anomaly,faulty_component,recommended_action,severity,final_status
+85,6.5,150,1,1,OK,All systems nominal,None,Normal
+130,6.8,110,1,1,Motor Overheat,Inspect cooling system or motor windings,Critical,Anomaly
+25,4.5,90,0,-1,"Motor Overheat, Brake Pressure Issue","Inspect cooling system or motor windings, Check compressor & pipe for leakage","Critical, Medium",Anomaly
+95,7.2,250,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,High,Anomaly
+110,8.5,180,2,1,"Brake Pressure Issue, Auxiliary Sensor Error","Check compressor & pipe for leakage, Reset or replace the sensor","Medium, Low",Anomaly
+60,5.0,190,1,1,OK,All systems nominal,None,Normal
+78,6.0,220,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,High,Anomaly
+122,5.3,85,0,1,Motor Overheat,Inspect cooling system or motor windings,Critical,Anomaly
+40,3.9,260,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay","Medium, High",Anomaly
+95,7.1,100,1,1,OK,All systems nominal,None,Normal

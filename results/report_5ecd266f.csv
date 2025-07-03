@@ -1,0 +1,102 @@
+motor_temp,brake_pressure,wheel_current_diff,aux_status,ml_anomaly,faulty_component,recommended_action,final_status
+95,6.5,180,1,1,OK,All systems nominal,Normal
+105,7.0,130,1,1,OK,All systems nominal,Normal
+128,4.5,100,0,-1,"Motor Overheat, Brake Pressure Issue","Inspect cooling system or motor windings, Check compressor & pipe for leakage",Anomaly
+29,8.1,250,1,-1,"Motor Overheat, Brake Pressure Issue, Wheel Slip Detected","Inspect cooling system or motor windings, Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+70,6.2,90,1,1,OK,All systems nominal,Normal
+85,5.5,190,1,1,OK,All systems nominal,Normal
+95,7.3,110,1,1,OK,All systems nominal,Normal
+122,6.1,201,2,1,"Motor Overheat, Wheel Slip Detected, Auxiliary Sensor Error","Inspect cooling system or motor windings, Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+56,4.8,180,0,1,Brake Pressure Issue,Check compressor & pipe for leakage,Anomaly
+102,6.9,175,1,1,OK,All systems nominal,Normal
+38,7.4,260,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+115,8.5,220,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+118,5.0,80,1,-1,OK,All systems nominal,Anomaly
+64,6.3,300,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+94,6.7,198,1,1,OK,All systems nominal,Normal
+130,4.3,199,0,-1,"Motor Overheat, Brake Pressure Issue","Inspect cooling system or motor windings, Check compressor & pipe for leakage",Anomaly
+92,6.6,190,1,1,OK,All systems nominal,Normal
+58,5.1,201,2,1,"Wheel Slip Detected, Auxiliary Sensor Error","Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+101,7.2,95,1,1,OK,All systems nominal,Normal
+44,5.7,255,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+67,6.8,240,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+87,5.9,180,1,1,OK,All systems nominal,Normal
+66,4.9,160,1,1,Brake Pressure Issue,Check compressor & pipe for leakage,Anomaly
+89,5.3,300,2,1,"Wheel Slip Detected, Auxiliary Sensor Error","Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+126,7.5,120,1,1,Motor Overheat,Inspect cooling system or motor windings,Anomaly
+45,4.4,140,1,1,Brake Pressure Issue,Check compressor & pipe for leakage,Anomaly
+119,5.6,110,1,1,OK,All systems nominal,Normal
+112,6.0,190,1,1,OK,All systems nominal,Normal
+100,6.5,220,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+33,4.7,230,0,-1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+88,5.2,130,1,1,OK,All systems nominal,Normal
+93,6.3,150,1,1,OK,All systems nominal,Normal
+78,4.2,215,2,-1,"Brake Pressure Issue, Wheel Slip Detected, Auxiliary Sensor Error","Check compressor & pipe for leakage, Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+97,5.8,145,1,1,OK,All systems nominal,Normal
+36,6.9,300,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+49,5.4,280,0,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+105,7.3,185,1,1,OK,All systems nominal,Normal
+61,5.9,210,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+90,6.2,198,1,1,OK,All systems nominal,Normal
+73,5.6,140,1,1,OK,All systems nominal,Normal
+98,4.3,265,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+115,8.3,205,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+80,4.9,300,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+55,6.5,245,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+101,6.1,195,1,1,OK,All systems nominal,Normal
+89,5.7,290,2,1,"Wheel Slip Detected, Auxiliary Sensor Error","Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+124,6.6,100,1,1,Motor Overheat,Inspect cooling system or motor windings,Anomaly
+62,6.0,150,1,1,OK,All systems nominal,Normal
+69,5.5,250,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+109,5.4,180,1,1,OK,All systems nominal,Normal
+84,5.1,270,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+99,6.9,190,1,1,OK,All systems nominal,Normal
+70,6.3,230,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+88,7.0,100,1,1,OK,All systems nominal,Normal
+125,4.6,300,2,-1,"Motor Overheat, Brake Pressure Issue, Wheel Slip Detected, Auxiliary Sensor Error","Inspect cooling system or motor windings, Check compressor & pipe for leakage, Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+55,7.4,220,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+40,5.0,240,0,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+100,5.8,260,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+81,5.5,90,1,1,OK,All systems nominal,Normal
+76,6.0,275,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+97,6.8,150,1,1,OK,All systems nominal,Normal
+93,7.1,210,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+114,6.2,130,1,1,OK,All systems nominal,Normal
+108,5.6,300,2,1,"Wheel Slip Detected, Auxiliary Sensor Error","Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+92,4.5,220,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+58,5.3,180,1,1,OK,All systems nominal,Normal
+47,6.7,195,1,1,OK,All systems nominal,Normal
+121,4.4,290,2,-1,"Motor Overheat, Brake Pressure Issue, Wheel Slip Detected, Auxiliary Sensor Error","Inspect cooling system or motor windings, Check compressor & pipe for leakage, Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+60,5.4,250,0,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+90,6.1,260,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+99,5.2,280,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+76,6.4,190,1,1,OK,All systems nominal,Normal
+105,5.7,150,1,1,OK,All systems nominal,Normal
+64,6.3,300,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+118,5.5,240,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+53,6.5,270,0,-1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+87,5.9,210,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+90,6.2,190,1,1,OK,All systems nominal,Normal
+125,7.5,250,1,1,"Motor Overheat, Wheel Slip Detected","Inspect cooling system or motor windings, Inspect traction motor & current diff relay",Anomaly
+67,4.6,280,2,1,"Brake Pressure Issue, Wheel Slip Detected, Auxiliary Sensor Error","Check compressor & pipe for leakage, Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+96,5.3,240,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+89,6.7,260,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+94,5.4,300,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+74,6.0,285,0,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+103,5.6,200,1,1,OK,All systems nominal,Normal
+61,4.8,240,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+110,6.9,160,2,-1,Auxiliary Sensor Error,Reset or replace the sensor,Anomaly
+77,5.1,250,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+66,5.8,290,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+119,6.2,280,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+82,5.5,270,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+102,6.3,300,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+59,4.7,230,1,1,"Brake Pressure Issue, Wheel Slip Detected","Check compressor & pipe for leakage, Inspect traction motor & current diff relay",Anomaly
+107,5.7,250,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+91,5.9,285,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+84,6.1,280,0,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+116,6.5,300,2,1,"Wheel Slip Detected, Auxiliary Sensor Error","Inspect traction motor & current diff relay, Reset or replace the sensor",Anomaly
+55,5.6,250,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+123,5.8,275,1,1,"Motor Overheat, Wheel Slip Detected","Inspect cooling system or motor windings, Inspect traction motor & current diff relay",Anomaly
+68,6.0,300,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly
+95,6.4,290,1,1,Wheel Slip Detected,Inspect traction motor & current diff relay,Anomaly

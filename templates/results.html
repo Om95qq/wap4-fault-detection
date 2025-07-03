@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WAP-4 Engine Diagnostic Portal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: #e9eff7;
+            color: #001d3d;
+        }
+
+        h1 {
+            text-align: center;
+            color: #002b5b;
+            font-size: 2rem;
+            padding-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .panel {
+            background: #f0f8ff;
+            border: 4px solid #003c71;
+            border-radius: 12px;
+            box-shadow: inset 0 0 20px #9ec4db, 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        .panel img.corner {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+
+        .top-left    { top: -20px; left: -20px; }
+        .top-right   { top: -20px; right: -20px; }
+        .bottom-left { bottom: -20px; left: -20px; }
+        .bottom-right{ bottom: -20px; right: -20px; }
+
+        .panel h2 {
+            text-align: center;
+            color: #002b5b;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .fault {
+            background: #ffffff;
+            border: 2px solid #0066cc;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .fault:hover {
+            background: #e0ecff;
+        }
+
+        .action {
+            display: none;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            color: #444;
+            font-weight: normal;
+        }
+
+        .summary-panel {
+            text-align: center;
+            margin-top: 30px;
+            background: #dceeff;
+            border: 2px solid #007acc;
+            border-radius: 10px;
+            padding: 15px;
+            font-weight: bold;
+            color: #003355;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-panel {
+            background: #f0f8ff;
+            border: 4px solid #003c71;
+            border-radius: 12px;
+            box-shadow: inset 0 0 20px #9ec4db, 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 80%;
+            position: relative;
+        }
+
+        .timeline-panel h2 {
+            text-align: center;
+            color: #002b5b;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .timeline-panel img.corner {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+
+        .timeline-panel .top-left { top: -20px; left: -20px; }
+        .timeline-panel .top-right { top: -20px; right: -20px; }
+        .timeline-panel .bottom-left { bottom: -20px; left: -20px; }
+        .timeline-panel .bottom-right { bottom: -20px; right: -20px; }
+
+        .extra-panel {
+            background: #f9fcff;
+            border: 4px solid #004477;
+            border-radius: 12px;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 90%;
+            box-shadow: inset 0 0 20px #b0d4e3, 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .extra-panel h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #002b5b;
+            text-transform: uppercase;
+        }
+
+        .extra-panel p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #003355;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            background: #003c71;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #005baa;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>🚂 WAP-4 Engine Diagnostic Portal</h1>
+
+    <div class="summary-panel">
+        <p>🔍 {{ summary_text }}</p>
+        <p>📉 Fault Percentage: <strong>{{ fault_percentage }}%</strong></p>
+    </div>
+
+    <div class="container">
+        <div class="panel">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner top-left">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner top-right">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner bottom-left">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner bottom-right">
+            <h2>Sensor Performance Chart</h2>
+            <img src="data:image/png;base64,{{ image_data }}" alt="Sensor Graph" style="width:100%; border-radius:10px;">
+        </div>
+
+        <div class="panel">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner top-left">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner top-right">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner bottom-left">
+            <img src="{{ url_for('static', filename='bolt.png') }}" class="corner bottom-right">
+            <h2>Fault Analysis Overview</h2>
+            {% for item in faults %}
+                <div class="fault" onclick="toggleAction(this)">
+                    🔧 {{ item.faulty_component }}
+                    <div class="action">💡 {{ item.recommended_action }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="timeline-panel">
+        <img src="{{ url_for('static', filename='bolt.png') }}" class="corner top-left">
+        <img src="{{ url_for('static', filename='bolt.png') }}" class="corner top-right">
+        <img src="{{ url_for('static', filename='bolt.png') }}" class="corner bottom-left">
+        <img src="{{ url_for('static', filename='bolt.png') }}" class="corner bottom-right">
+        <h2>Fault Progression Timeline</h2>
+        <img src="data:image/png;base64,{{ timeline_chart }}" alt="Fault Timeline" style="width:100%; border-radius:10px;">
+    </div>
+
+    <div class="extra-panel">
+        <h2>Operational Intelligence Metrics</h2>
+        <p>🧭 Engine Load Consistency: <strong>{{ engine_load_status }}</strong></p>
+        <p>🔄 Brake System Balance: <strong>{{ brake_balance }}</strong></p>
+        <p>🧪 Voltage Deviation: <strong>{{ voltage_variance }}</strong></p>
+        <p>🛠️ Auxiliary Subsystems Status: <strong>{{ aux_status_summary }}</strong></p>
+    </div>
+
+    <form method="get" action="/download/{{ file_name }}">
+        <button type="submit">📥 Download Diagnostic Report</button>
+    </form>
+
+    <script>
+        function toggleAction(elem) {
+            let action = elem.querySelector('.action');
+            action.style.display = action.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
